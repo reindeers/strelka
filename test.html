@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="app"></div>
+  <!--  <script src="main.js"></script> -->
+    <link href='test.css' rel='stylesheet' />
+
+    <section>
+        <nav class="menu__navigation">
+            <ul class="menu__navigation_list">
+                <li class="menu__navigation-item_logo">vector</li>
+                <li>Курсы</li>
+                <li>Материалы</li>
+                <li>Проекты</li>
+                <li>Партнерство</li>
+                <li>О школе</li>
+                <li class="menu__navigation-item_sign-in">Войти</li>
+                <li class="menu__navigation-item_sign-up">Зарегистрироваться</li>
+            </ul>
+        </nav>
+        <div class="menu__header">
+            <h1>Онлайн-школа городских предпринимателей</h1>
+            <button class="menu__start_button">Начать обучение</button><button class="menu__play_button">go</button><span>Посмотреть видео</span>
+        </div>
+        <p class="menu__counter">0</p>
+    </section>
+    <section class="cards">
+        <article class="card__description">
+            <h1>Онлайн-курсы</h1>
+            <p>Наши курсы - практические, они помогают в формировании образа мышления у горожанина, и формирования спроса на городские инициативы.</p>
+            <a href="#">Посмотреть все курсы</a>
+        </article>
+        <article class="card__course">
+          <div class="wrapper">
+    <svg width="100%" height="100%" class="svg">
+
+        <symbol id="s-mask-circles">
+            <g stroke="gray" stroke-width="0" fill="white">
+                <rect width="100%" height="75%" />
+            </g>
+        </symbol>
+
+        <mask id="mask-circles">
+            <use xlink:href="#s-mask-circles" />
+        </mask>
+
+        <symbol id="s-flower-m">
+            <image xlink:href="1.jpg" width="500px" height="100%" />
+        </symbol>
+
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#s-flower-m"></use>
+
+    </svg>
+
+
+    <svg width="500px" height="100%" class="svg">
+        <g mask="url(#mask-circles)">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#s-flower-m"></use>
+        </g>
+    </svg>
+
+</div>
+            <h1>Экскурсии как бизнес</h1>
+            <h2>Новый курс о том, как стать независимым гидом и проводить экскурсии</h2>
+        </article>
+        <article class="card__course">
+            <img src='1.jpg'/>
+            <h1>Экскурсии как бизнес</h1>
+            <h2>Новый курс о том, как стать независимым гидом и проводить экскурсии</h2>
+        </article>
+    </section>
+</body>
+</html>
