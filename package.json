@@ -1,0 +1,28 @@
+{
+  "name": "strelka",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reindeers/strelka.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reindeers/strelka/issues"
+  },
+  "homepage": "https://github.com/reindeers/strelka#readme",
+  "dependencies": {
+    "browserify": "^13.1.1",
+    "express": "^4.14.0",
+    "express-react-views": "^0.10.2",
+    "node-jsx": "^0.13.3",
+    "react": "^15.4.0",
+    "react-dom": "^15.4.0"
+  }
+}
