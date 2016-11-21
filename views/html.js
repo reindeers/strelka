@@ -1,6 +1,6 @@
 var React = require('react');
 var ReactDOMServer = require('react-dom/server');
-var Content = require('./Content');
+var MainContainer = require('./containers/MainContainer/MainContainer');
 
 class Html extends React.Component {
 
@@ -8,7 +8,7 @@ class Html extends React.Component {
     var data = this.props.data;
 
     // render the content as a dynamic react component
-    var contentHtml = ReactDOMServer.renderToString(<Content {...data}/>);
+    var contentHtml = ReactDOMServer.renderToString(<MainContainer {...data}/>);
 
     /**
      * re-render the content as json,
@@ -17,7 +17,7 @@ class Html extends React.Component {
      * NOTE on XSS prevention:
      *
      * This text will be placed into a script tag.
-     * It cannot be escaped,
+     * It cannot be escapedy
      * because it is intended to be raw javascript.
      * Were the data object to contain the string, "</script>",
      * the script tag would terminate prematurely.
@@ -48,19 +48,14 @@ class Html extends React.Component {
      * If avoidance is impossible,
      * know what you are doing and good luck.
      */
-    var initScript = 'main(' + JSON.stringify(data).replace(/script/g, 'scr"+"ipt') + ')';
 
     return (
       <html lang="en">
         <head>
-          <meta name="viewport" content="width=device-width, initial-scale=1"/>
-          <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
         </head>
         <body>
           <div id="content" dangerouslySetInnerHTML={{__html: contentHtml}}/>
 
-          <script src="/main.js"></script>
-          <script dangerouslySetInnerHTML={{__html: initScript}} />
 
         </body>
       </html>

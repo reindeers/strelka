@@ -17,7 +17,7 @@ app.get('/', function (req, res) {
     ],
     text: ''
   };
-  res.render('Html', { data: initialState });
+  res.render('html', { data: initialState });
 });
 
 var port = process.env.PORT || 3000;
