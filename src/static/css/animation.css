@@ -1,0 +1,32 @@
+.example-enter {
+  opacity: 0.01;
+}
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: 500ms;
+}
+.example-leave {
+  opacity: 1;
+}
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: 500ms;
+}
+.background-enter {
+  height: 0.1px;
+  width: 0.1px;
+}
+.background-enter.example-enter-active {
+  height: 100vw;
+  width: 100vh;
+  transition: 500ms;
+}
+.background-leave {
+  height: 100vw;
+  width: 100vh;
+}
+.background-leave.example-leave-active {
+  height: 0.1px;
+  width: 0.1px;
+  transition: 500ms;
+}
